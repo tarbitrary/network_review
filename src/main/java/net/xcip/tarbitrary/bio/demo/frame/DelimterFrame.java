@@ -1,9 +1,6 @@
 package net.xcip.tarbitrary.bio.demo.frame;
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
  * <p></p>
@@ -37,7 +34,21 @@ public class DelimterFrame implements Frame {
     }
 
     @Override
-    public void nextFrame(InputStream is) {
+    public byte[] nextFrame(InputStream is) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        for (; ;) {
+            try {
+                byte b = (byte) is.read();
+                if (b == delimter) {
+                    break;
+                }
+                baos.write(b);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return baos.toByteArray();
 
     }
 }
