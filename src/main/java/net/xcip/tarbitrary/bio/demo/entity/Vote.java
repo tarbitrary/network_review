@@ -11,8 +11,22 @@ package net.xcip.tarbitrary.bio.demo.entity;
 public class Vote {
     private int userId;
 
+
+
+    /**
+     *
+     * 是否为请求
+     * true 表示请求
+     * false 表示响应
+     */
     private boolean isRequest;
 
+    /**
+     * 投票or查询
+     * true 表示投票
+     * false 表示查询
+     */
+    private boolean voteFlag;
     private int counts;
 
     public int getUserId() {
@@ -37,5 +51,23 @@ public class Vote {
 
     public void setCounts(int counts) {
         this.counts = counts;
+    }
+
+    public boolean isVoteFlag() {
+        return voteFlag;
+    }
+
+    public void setVoteFlag(boolean voteFlag) {
+        this.voteFlag = voteFlag;
+    }
+
+    @Override
+    public String toString() {
+        return "Vote{" +
+                "userId=" + userId +
+                ", isRequest=" + isRequest +
+                ", voteFlag=" + voteFlag +
+                ", counts=" + counts +
+                '}';
     }
 }
