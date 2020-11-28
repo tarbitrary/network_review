@@ -1,4 +1,4 @@
-package net.xcip.tarbitrary.bio.demo.frame;
+package net.xcip.tarbitrary.demo.frame;
 
 import java.io.*;
 
@@ -13,6 +13,7 @@ import java.io.*;
 public class DelimterFrame implements Frame {
 
     private byte delimter = '\n';
+
     @Override
     public void write2Frame(byte[] buf, OutputStream os) {
         DataOutputStream dos = new DataOutputStream(os);
@@ -30,13 +31,12 @@ public class DelimterFrame implements Frame {
         }
 
 
-
     }
 
     @Override
     public byte[] nextFrame(InputStream is) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        for (; ;) {
+        for (; ; ) {
             try {
                 byte b = (byte) is.read();
                 if (b == delimter) {

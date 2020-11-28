@@ -1,4 +1,4 @@
-package net.xcip.tarbitrary.bio.demo.entity;
+package net.xcip.tarbitrary.demo.entity;
 
 /**
  * <p></p>

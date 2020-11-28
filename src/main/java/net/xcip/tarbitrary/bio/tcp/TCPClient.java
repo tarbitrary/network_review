@@ -34,8 +34,6 @@ public class TCPClient {
 //        outputStream.close();
 
 
-
-
         InputStream inputStream = socket.getInputStream();
         int len = 0;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

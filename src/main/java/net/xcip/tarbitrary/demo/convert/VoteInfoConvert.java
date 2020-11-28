@@ -1,6 +1,6 @@
-package net.xcip.tarbitrary.bio.demo.convert;
+package net.xcip.tarbitrary.demo.convert;
 
-import net.xcip.tarbitrary.bio.demo.entity.Vote;
+import net.xcip.tarbitrary.demo.entity.Vote;
 
 /**
  * <p></p>
@@ -13,15 +13,17 @@ import net.xcip.tarbitrary.bio.demo.entity.Vote;
 public interface VoteInfoConvert {
     /**
      * 字节转换成投票信息
+     *
      * @param bytes 转化的字节
      * @return 投票信息
      */
-  public Vote marshall(byte[] bytes);
+    public Vote marshall(byte[] bytes);
 
     /**
      * 投票信息转换成字节
+     *
      * @param vote
      * @return
      */
-  public byte[] unmarshall(Vote vote);
+    public byte[] unmarshall(Vote vote);
 }

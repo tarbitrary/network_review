@@ -1,4 +1,4 @@
-package net.xcip.tarbitrary.bio.demo.frame;
+package net.xcip.tarbitrary.demo.frame;
 
 import java.io.InputStream;
 import java.io.OutputStream;

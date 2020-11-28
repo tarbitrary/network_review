@@ -1,6 +1,6 @@
-package net.xcip.tarbitrary.bio.demo.convert;
+package net.xcip.tarbitrary.demo.convert;
 
-import net.xcip.tarbitrary.bio.demo.entity.Vote;
+import net.xcip.tarbitrary.demo.entity.Vote;
 
 /**
  * <p></p>

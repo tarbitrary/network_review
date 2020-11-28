@@ -23,7 +23,7 @@ public class UDPServer {
         int length = dp.getLength();
         byte[] data = dp.getData();
         String result = new String(data, 0, length, "UTF-8");
-        System.out.println("receive result," + result );
+        System.out.println("receive result," + result);
 
         dp.setLength(0);
         String s = "echo udp," + result;

@@ -19,7 +19,7 @@ public class LocalNetWorkInfo {
         getLocalNetWorkInfo();
     }
 
-    public static void  getLocalNetWorkInfo() throws SocketException {
+    public static void getLocalNetWorkInfo() throws SocketException {
         Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
         if (null == networkInterfaces) {
             System.out.println("nothing");
@@ -34,10 +34,9 @@ public class LocalNetWorkInfo {
 
             while (inetAddresses.hasMoreElements()) {
                 InetAddress inetAddress = inetAddresses.nextElement();
-                System.out.println("type " + (inetAddress instanceof Inet6Address ? "v6" : "v4") + "address"  + inetAddress.getHostAddress() + "hostname" + inetAddress.getHostName() + "address" + inetAddress.getAddress());
+                System.out.println("type " + (inetAddress instanceof Inet6Address ? "v6" : "v4") + "address" + inetAddress.getHostAddress() + "hostname" + inetAddress.getHostName() + "address" + inetAddress.getAddress());
             }
         }
-
 
 
     }

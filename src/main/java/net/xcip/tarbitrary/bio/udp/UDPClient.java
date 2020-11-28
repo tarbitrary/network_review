@@ -32,6 +32,5 @@ public class UDPClient {
         System.out.println("receive, " + new String(receive.getData(), 0, receive.getLength()));
 
 
-
     }
 }
