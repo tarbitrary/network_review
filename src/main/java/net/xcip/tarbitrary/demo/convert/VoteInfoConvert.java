@@ -17,7 +17,6 @@ public interface VoteInfoConvert {
      * @param bytes 转化的字节
      * @return 投票信息
      */
-
     Vote decode(byte[] bytes);
 
     /**
@@ -26,5 +25,5 @@ public interface VoteInfoConvert {
      * @param vote
      * @return
      */
-     byte[] encode(Vote vote);
+    byte[] encode(Vote vote);
 }
