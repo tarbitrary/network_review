@@ -1,6 +1,7 @@
 package net.xcip.tarbitrary.bio.demo.convert;
 
-import net.xcip.tarbitrary.bio.demo.entity.Vote;
+import net.xcip.tarbitrary.demo.convert.VoteInfoConvert;
+import net.xcip.tarbitrary.demo.entity.Vote;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

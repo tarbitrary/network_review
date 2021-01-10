@@ -1,5 +1,7 @@
 package net.xcip.tarbitrary.bio.demo.frame;
 
+import net.xcip.tarbitrary.demo.frame.Frame;
+
 import java.io.*;
 
 public class LengthFrame implements Frame {

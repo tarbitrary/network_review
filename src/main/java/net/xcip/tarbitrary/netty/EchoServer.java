@@ -19,14 +19,16 @@ public class EchoServer {
         final EventLoopGroup bossExecutors = new NioEventLoopGroup(1);
         final EventLoopGroup workerExecutors = new NioEventLoopGroup();
         try {
-            final ChannelFuture channelFuture = serverBootstrap.group(bossExecutors, workerExecutors).channel(NioServerSocketChannel.class).localAddress(8888).childHandler(new ChannelInitializer<SocketChannel>() {
+            serverBootstrap.group(bossExecutors, workerExecutors).channel(NioServerSocketChannel.class).localAddress(8888).childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
                     final InetSocketAddress inetSocketAddress = ch.remoteAddress();
                     System.out.println("client connected, " + inetSocketAddress.getAddress().toString() + ":" + inetSocketAddress.getPort());
                     ch.pipeline().addLast(echoServerHandler);
                 }
-            }).bind().sync();
+            });
+            final ChannelFuture bind = serverBootstrap.bind();
+            final ChannelFuture channelFuture =  bind.sync();
 
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
